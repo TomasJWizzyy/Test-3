@@ -56,3 +56,36 @@ def calculate_acceleration_x(v, k=0.0, mass=1.0):
     total_force = force_air
     a = total_force/mass
     return a
+
+def falling_mass(initial_height, k=0.0, mass=1.0, dt=0.1):
+    # Fixed input values
+    start_velocity = 0.0 # m/s
+    gravity = -9.81 # m/s2
+
+    # Initial values for our parameters
+    distance_moved = 0
+    h = initial_height
+    v = start_velocity
+    t = 0.0
+
+    # Create empty lists which we will update
+    height = []
+    velocity = [] 
+    time = []
+
+    # Keep looping while the object is still falling
+    while h > 0:
+       
+         # Evaluate the state of the system - start by calculating the total force on the object 
+         a = calculate_acceleration(v, k=k, mass=mass, gravity=gravity)
+
+         # Append values to list and then update 
+         height.append(h)
+         velocity.append(v)
+         time.append(t)
+
+         # Update the state for time, height and velocity
+
+         t, h, v = update_state(t, h, v, a, dt=dt)
+    
+    return time, height, velocity
