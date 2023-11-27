@@ -55,8 +55,10 @@ def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
         a_x = calculate_acceleration_x(v_x, k=k, mass=mass)
 
         # Append values to list and then update 
+        x_coord.append(x)
         height.append(h)
-        velocity.append(v)
+        velocity_y.append(v_y)
+        velocity_x.append(v_x)
         time.append(t)
 
         # Update the state for time, height and velocity
