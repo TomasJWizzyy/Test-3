@@ -1,5 +1,5 @@
 
-def plot_xy:
+def plot_xy():
 
     plt.plot(x_coord, height) 
     plt.xlabel('x Coordinate (m)') 
