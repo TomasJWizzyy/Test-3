@@ -28,7 +28,7 @@ def calculate_acceleration_x(v, k=0.0, mass=1.0):
     a = total_force/mass
     return a
 
-def falling_mass(initial_height, k=0.0, mass=1.0, dt=0.1):
+def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
     
     start_velocity = 0.0 # m/s
     gravity = -9.81 # m/s2
