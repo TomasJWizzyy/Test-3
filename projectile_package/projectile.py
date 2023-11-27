@@ -34,9 +34,11 @@ def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
     gravity = -9.81 # m/s2
 
     # Initial values for our parameters
-    distance_moved = 0
-    h = initial_height
-    v = start_velocity
+    x = 0
+    h = 0
+    v_x = start_velocity_x
+    v_y = start_velocity_y
+    
     t = 0.0
 
     # Create empty lists which we will update
