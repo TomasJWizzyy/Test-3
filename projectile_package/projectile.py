@@ -30,7 +30,7 @@ def calculate_acceleration_x(v, k=0.0, mass=1.0):
 
 def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
     
-    start_velocity = 0.0 # m/s
+    
     gravity = -9.81 # m/s2
 
     # Initial values for our parameters
@@ -49,7 +49,8 @@ def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
     # Keep looping while the object is still falling
     while h > 0:
         
-        a = calculate_acceleration(v, k=k, mass=mass, gravity=gravity)
+        a_y = calculate_acceleration_y(v_y, k=k, mass=mass, gravity=gravity)
+        a_x = calculate_acceleration_x(v_x, k=k, mass=mass)
 
         # Append values to list and then update 
         height.append(h)
