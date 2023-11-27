@@ -66,4 +66,4 @@ def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
         t, h, v_y = update_state(t, h, v_y, a_y, dt=dt)
         t, x, v_x = update_state(t, x, v_x, a_x, dt=dt)
     
-    return time, height, velocity
+    return time, x_coord, height, velocity_x, velocity_y
