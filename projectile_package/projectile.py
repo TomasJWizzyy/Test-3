@@ -43,7 +43,9 @@ def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
 
     # Create empty lists which we will update
     height = []
-    velocity = [] 
+    x_coord = []
+    velocity_x = []
+    velocity_y = []
     time = []
 
     # Keep looping while the object is still falling
