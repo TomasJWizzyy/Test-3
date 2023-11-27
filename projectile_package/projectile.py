@@ -49,7 +49,7 @@ def falling_mass(start_velocity_x, start_velocity_y, k=0.0, mass=1.0, dt=0.1):
     time = []
 
     # Keep looping while the object is still falling
-    while h > 0:
+    while h >= 0:
         
         a_y = calculate_acceleration_y(v_y, k=k, mass=mass, gravity=gravity)
         a_x = calculate_acceleration_x(v_x, k=k, mass=mass)
